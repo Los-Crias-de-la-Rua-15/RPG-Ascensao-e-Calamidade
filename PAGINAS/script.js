@@ -1,12 +1,14 @@
-// Configuração do Firebase
-const firebaseConfig = {
-    apiKey: "sua-api-key",
-    authDomain: "seu-auth-domain",
-    projectId: "seu-project-id",
-    storageBucket: "seu-storage-bucket",
-    messagingSenderId: "seu-messaging-sender-id",
-    appId: "seu-app-id"
-};
+ // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBVZ-CmUy3nopQ51PziGfk6EjWvpVH1q9U",
+            authDomain: "rpg-bf68e.firebaseapp.com",
+            projectId: "rpg-bf68e",
+            storageBucket: "rpg-bf68e.firebasestorage.app",
+            messagingSenderId: "1098256795397",
+            appId: "1:1098256795397:web:c18b40c1715cd1c6d4996c",
+            measurementId: "G-G1X064VEZD"
+          };
 
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
