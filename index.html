@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ascensão & Calamidade</title>
-    <link rel="stylesheet" href="INDEX CODES/styles.css"> <!-- Vincula o arquivo CSS -->
+    <link rel="stylesheet" href="INDEX CODES/styles.css">
 </head>
 <body>
 
@@ -14,13 +14,26 @@
     <!-- Botões de entrar e registrar -->
     <div class="button-container">
         <button class="button" onclick="window.location.href='PAGINAS/logger.html'">Entrar</button>
-        
         <button class="button" onclick="window.location.href='PAGINAS/register.html'">Registrar</button>
     </div>
     
     <!-- Rodapé com contato -->
     <div class="footer">
         <p><a href="mailto:gabrielduarte.trampo@gmail.com">Contato com os Devs</a></p>
+    </div>
+
+    <!-- Botão de imagem fixo no canto superior direito -->
+    <button class="image-button" onclick="toggleSidebar()">
+        <img src="sua-imagem.png" alt="Ícone" />
+    </button>
+
+    <!-- Barra lateral -->
+    <div class="sidebar" id="sidebar">
+        <button class="sidebar-button" onclick="window.location.href='PAGINAS/logger.html'">Entrar no Jogo</button>
+        <button class="sidebar-button" onclick="window.location.href='fichas.html'">Fichas</button>
+        <button class="sidebar-button" onclick="window.location.href='livro.html'">Livro do Sistema</button>
+        <button class="sidebar-button" onclick="window.location.href='conta.html'">Conta</button>
+        <button class="sidebar-button" onclick="window.location.href='configuracoes.html'">Configurações</button>
     </div>
 
     <!-- Inclusão do arquivo de script JS -->

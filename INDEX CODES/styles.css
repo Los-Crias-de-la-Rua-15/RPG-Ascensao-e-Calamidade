@@ -69,3 +69,52 @@ a:hover {
 body {
   padding-top: 20px; /* Para evitar que o conteúdo fique coberto pela barra de navegação */
 }
+/* Estilo do botão fixo no canto superior direito */
+.image-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.image-button img {
+  width: 40px; /* Ajuste o tamanho da imagem como necessário */
+  height: auto;
+}
+
+/* Estilo da barra lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Inicialmente fora da tela */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  transition: transform 0.3s ease; /* Animação para o slide */
+  z-index: 1000;
+  padding-top: 20px;
+}
+
+.sidebar-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #444;
+  border: none;
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #555;
+}
+
+.sidebar-button:hover {
+  background-color: #555;
+}
+
+/* Quando a sidebar estiver aberta */
+.sidebar.open {
+  transform: translateX(-250px); /* Move a barra lateral para a tela */
+}
