@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar - Ascensão & Calamidade</title>
+    <title>Cadastro - Ascensão & Calamidade</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula o arquivo CSS -->
 </head>
 <body>
-    <h1>Crie sua conta para Ascensão & Calamidade</h1>
-    <p>Formulário de registro virá aqui.</p>
+    <h1>Cadastro - Ascensão & Calamidade</h1>
+
+    <!-- Formulário de Cadastro Manual -->
+    <form id="manualRegistration">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="Digite seu email">
+        </div>
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required placeholder="Digite sua senha">
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <!-- Cadastro com Google -->
+    <button id="googleLoginBtn">Cadastrar com Google</button>
+
+    <div>
+        <a href="login.html">Já tem uma conta? Faça login aqui.</a>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+    <script src="script.js" defer></script> <!-- Vincula o arquivo JavaScript -->
 </body>
 </html>
