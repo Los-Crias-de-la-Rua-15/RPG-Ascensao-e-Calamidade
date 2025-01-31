@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout com Botões Dinâmicos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="main-rectangle">
+    <!-- Barra lateral esquerda -->
+    <div class="side-bar">
+      <button onclick="createTabbedScreen()">1</button>
+      <button onclick="updateContent('Conteúdo do Botão 2')">2</button>
+      <button onclick="updateContent('Conteúdo do Botão 3')">3</button>
+      <button onclick="updateContent('Conteúdo do Botão 4')">4</button>
+      <button onclick="updateContent('Conteúdo do Botão 5')">5</button>
+    </div>
+
+    <!-- Área central do retângulo (onde aparecerão as informações) -->
+    <div id="content-area" class="content-area">
+      <p>Informações aparecerão aqui.</p>
+    </div>
+
+    <!-- Barra lateral direita -->
+    <div class="side-bar">
+      <button onclick="updateContent('Conteúdo do Botão 6')">6</button>
+      <button onclick="updateContent('Conteúdo do Botão 7')">7</button>
+      <button onclick="updateContent('Conteúdo do Botão 8')">8</button>
+      <button onclick="updateContent('Conteúdo do Botão 9')">9</button>
+      <button onclick="updateContent('Conteúdo do Botão 10')">10</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
