@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Ascensão & Calamidade</title>
+    <title>Login - Ascensão & Calamidade</title>
     <link rel="stylesheet" href="styles.css"> <!-- Vincula o arquivo CSS -->
 </head>
 <body>
     <!-- Nome do RPG fixo no topo da tela -->
     <div class="header">
-        <a href= "/index.html" class="logo">
+        <a href="/index.html" class="logo">
             <h1>Ascensão & Calamidade</h1>
-    </a>
-</div>
+        </a>
+    </div>
 
-
-    <!-- Caixa de Cadastro -->
+    <!-- Caixa de Login -->
     <div class="form-container">
-        <form id="manualRegistration">
+        <form id="manualLogin">
             <div>
                 <label for="email">Email:</label>
                 <input type="email" id="email" required placeholder="Digite seu email">
@@ -26,7 +25,7 @@
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" required placeholder="Digite sua senha">
             </div>
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Entrar</button>
         </form>
 
         <!-- Divisão com o "ou" -->
@@ -34,19 +33,20 @@
             <span>Ou</span>
         </div>
 
-        <!-- Cadastro com Google -->
-        <button id="googleLoginBtn">Cadastrar com Google</button>
+        <!-- Login com Google -->
+        <button id="googleLoginBtn">Entrar com Google</button>
     </div>
 
-    <!-- Link para página de login -->
+    <!-- Link para página de cadastro -->
     <div>
-        <a href="logger.html">Já tem uma conta? Faça login aqui.</a>
+        <a href="register.html">Ainda não tem uma conta? Cadastre-se aqui.</a>
     </div>
+
     <script type="module">
         // Importa os módulos necessários do Firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
-    
+        import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
         // Configuração do Firebase
         const firebaseConfig = {
             apiKey: "AIzaSyBVZ-CmUy3nopQ51PziGfk6EjWvpVH1q9U",
@@ -57,56 +57,55 @@
             appId: "1:1098256795397:web:c18b40c1715cd1c6d4996c",
             measurementId: "G-G1X064VEZD"
         };
-    
+
         // Inicializa o Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);  // Obter a instância de autenticação
-    
-        // Função para cadastro manual com email e senha
-        document.getElementById("manualRegistration").addEventListener("submit", function(event) {
+
+        // Função para login manual com email e senha
+        document.getElementById("manualLogin").addEventListener("submit", function(event) {
             event.preventDefault(); // Impede o envio do formulário
-    
+
             const email = document.getElementById("email").value;
             const senha = document.getElementById("senha").value;
-    
-            // Usando o método createUserWithEmailAndPassword do Firebase v9+
-            createUserWithEmailAndPassword(auth, email, senha)
+
+            // Usando o método signInWithEmailAndPassword do Firebase
+            signInWithEmailAndPassword(auth, email, senha)
                 .then((userCredential) => {
                     const user = userCredential.user;
-                    console.log("Usuário registrado com sucesso:", user.email);
-                    alert("Cadastro realizado com sucesso!");
-                    window.location.href = "/index.html"; // Redireciona para a página do jogo
+                    console.log("Usuário logado com sucesso:", user.email);
+                    alert("Login realizado com sucesso!");
+                    window.location.href = "game.html"; // Redireciona para a página do jogo
                 })
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    alert("Erro ao cadastrar: " + errorMessage);
+                    alert("Erro ao fazer login: " + errorMessage);
                     console.log(errorCode, errorMessage);
                 });
         });
-    
-        // Função para cadastro com o Google
+
+        // Função para login com o Google
         document.getElementById("googleLoginBtn").addEventListener("click", function() {
             const provider = new GoogleAuthProvider();
-    
-            // Usando o método signInWithPopup do Firebase v9+
+
+            // Usando o método signInWithPopup do Firebase
             signInWithPopup(auth, provider)
                 .then((result) => {
                     const user = result.user;
-                    console.log("Usuário registrado com o Google:", user.email);
-                    alert("Cadastro realizado com sucesso!");
-                    window.location.href = "/index.html"; // Redireciona para a página do jogo
+                    console.log("Usuário logado com o Google:", user.email);
+                    alert("Login realizado com sucesso!");
+                    window.location.href = "game.html"; // Redireciona para a página do jogo
                 })
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    alert("Erro ao cadastrar com Google: " + errorMessage);
+                    alert("Erro ao fazer login com Google: " + errorMessage);
                     console.log(errorCode, errorMessage);
                 });
         });
     </script>
-    
-    
+
     <script src="script.js" defer></script> <!-- Vincula o arquivo JavaScript -->
 </body>
 </html>
