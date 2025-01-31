@@ -35,7 +35,7 @@ function showPersonalInfo() {
   return `
     <div id="info-area" class="info-area">
       <div class="profile-picture">
-        <img src="profile.jpg" alt="Imagem do perfil">
+        <img src="CODES/IMAGENS/profile.jpg" alt="Imagem do perfil">
       </div>
       <div class="personal-info">
         ${['Nome: Gabriel', 'Idade: 20 anos', 'Altura: 1,75m', 'Sexo: Masculino', 'Raça: Humano', 'Sexualidade: Bissexual', 'História: Sempre em busca de conhecimento e novos desafios.']
