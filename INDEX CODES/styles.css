@@ -118,3 +118,29 @@ body {
 .sidebar.open {
   transform: translateX(-250px); /* Move a barra lateral para a tela */
 }
+a:hover {
+  text-decoration: none;
+}
+/* Caixa do nome do RPG */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+  padding: 15px 20px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header a {
+  font-size: 28px;
+  font-family: 'Georgia', serif;
+  color: #f4f4f4;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: #4e3400;
+}

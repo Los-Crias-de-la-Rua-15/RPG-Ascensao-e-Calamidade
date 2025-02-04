@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Fichas - Ascensão & Calamidade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Nome do RPG fixo no topo da tela -->
+    <div class="header">
+        <a href="/index.html" class="logo">
+            <h1>Ascensão & Calamidade</h1>
+        </a>
+    </div>
+    <h1 style="
+    font-size: 28px;
+    font-family: Georgia, serif;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 60px;
+    margin-bottom: 20px;
+    "
+    >Minhas Fichas</h1>
+    <div class="ficha-container">
+        <!-- Espaços para armazenar até 5 fichas -->
+        <div class="ficha" id="ficha1">
+            <img src="personagem1.jpg" alt="Personagem" class="ficha-img">
+            <div class="ficha-info">
+                <p><strong>Nome:</strong> Personagem 1</p>
+                <p><strong>Atributos:</strong> Força: 10, Agilidade: 8, Inteligência: 7</p>
+                <p><strong>Situação Atual:</strong> Vida: 80/100 | Espírito: 50/70 | Sanidade: 60/100</p>
+                <div class="ficha-buttons">
+                    <button class="editar">Editar</button>
+                    <button class="usar">Usar</button>
+                    <button class="apagar" onclick="confirmarExclusao('ficha1')">Apagar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
